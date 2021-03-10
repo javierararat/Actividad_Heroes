@@ -32,7 +32,7 @@ class VerDatosActivity : AppCompatActivity() {
         viewBinding.tvNameSend.text = intent.getString(HEROE_KEY)
         viewBinding.ratingBar.rating = intent.getFloat(POWER_KEY)
         viewBinding.photoSend.setImageBitmap(intent.getParcelable<Bitmap>(IMAGE_KEY))
-*/
+        */
 
         //val people = intent.getSerializableExtra(HEROE_KEY) as? Heroe
         val heroe = intent.getParcelableExtra<Heroe>(HEROE_KEY)
@@ -41,6 +41,5 @@ class VerDatosActivity : AppCompatActivity() {
             viewBinding.ratingBar.rating  = heroe.power!!
             viewBinding.photoSend.setImageBitmap(heroe.img)
         }
-
     }
 }
